@@ -4,10 +4,15 @@ package com.company;
  * Created by replay on 2016. 3. 27..
  */
 public class QuickSort {
-    private int count =0;
-    private boolean value = true;
+    private int count;
+    private boolean value;
 
-    public int[] Qsort(int[] data,int start,int end){
+    public QuickSort() {
+        count = 0;
+        value = true;
+    }
+
+    public int[] Qsort(int[] data, int start, int end){
         int[] q_data = data;
         int q;
         if (start < end){

@@ -1,23 +1,34 @@
 package com.company;
 
 public class Main {
+    QuickSort quickSort;
+    InsertSort insertSort;
+    SelectiveSort selectiveSort;
+    PrintSort printSort;
+    MakeArray makeArray;
+
+    public Main() {
+        quickSort = new QuickSort();
+        insertSort = new InsertSort();
+        selectiveSort = new SelectiveSort();
+        printSort = new PrintSort();
+        makeArray = new MakeArray();
+        control();
+    }
 
     public static void main(String[] args) {
-        Main main = new Main();
-        main.control();
+        new Main();
     }
     public void control(){
-        QuickSort quickSort = new QuickSort();
-        InsertSort insertSort  = new InsertSort();
-        SelectiveSort selectiveSort = new SelectiveSort();
-        PrintSort printSort = new PrintSort();
-        MakeArray makeArray = new MakeArray();
-        MakeArray makeArray1= new MakeArray();
-        MakeArray makeArray2= new MakeArray();
 
         int[] data1 = makeArray.makearray();
-        int[] data2 = makeArray1.makearray();
-        int[] data3 = makeArray2.makearray();
+        int[] data2 = new int[data1.length];
+        int[] data3 = new int[data1.length];
+        //배열 복제
+        for (int i =0;i<data1.length;i++){
+            data2[i] = data1[i];
+            data3[i] = data1[i];
+        }
 
         printSort.print(selectiveSort.Ssort(data1));
 
@@ -25,13 +36,4 @@ public class Main {
 
         printSort.print(quickSort.Qsort(data3,0,data3.length-1));
     }
-
-
-
-
-
-
-
-
-
 }
