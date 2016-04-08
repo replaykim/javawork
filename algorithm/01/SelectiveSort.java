@@ -17,6 +17,7 @@ public class SelectiveSort {
             count++;
 
             for(int j = i; j>0;j--){
+                count++;
                 if (bignumber<s_data[j-1]){
                     bignumber = s_data[j-1];
                     count++;
@@ -31,7 +32,7 @@ public class SelectiveSort {
             s_data[i]=bignumber;
             count++;
         }
-        System.out.println(count);
+        System.out.println("selective : "+count);
         return s_data;
     }
 }

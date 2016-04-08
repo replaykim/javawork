@@ -11,11 +11,9 @@ public class MakeArray {
     public MakeArray() {
         random = new Random();
         data = new int[100];
-
     }
 
     public int[] makearray(){
-
         for (int i = 0; i<100;i++){
             data[i] = random.nextInt(10000);
         }
