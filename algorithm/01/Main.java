@@ -13,14 +13,12 @@ public class Main {
         selectiveSort = new SelectiveSort();
         printSort = new PrintSort();
         makeArray = new MakeArray();
-        control();
     }
-
     public static void main(String[] args) {
-        new Main();
+        Main main = new Main();
+        main.control();
     }
     public void control(){
-
         int[] data1 = makeArray.makearray();
         int[] data2 = new int[data1.length];
         int[] data3 = new int[data1.length];
@@ -29,7 +27,6 @@ public class Main {
             data2[i] = data1[i];
             data3[i] = data1[i];
         }
-
         printSort.print(selectiveSort.Ssort(data1));
 
         printSort.print(insertSort.Isort(data2));
