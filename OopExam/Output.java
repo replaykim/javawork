@@ -1,4 +1,4 @@
-package com.company;
+package exam1;
 
 public class Output {
 	private int resultdate;

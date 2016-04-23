@@ -1,4 +1,4 @@
-package com.company;
+package exam1;
 
 public class DateOperation {
 	private int[] datePermonth = {31,29,31,30,31,30,31,31,30,31,30,31};
@@ -11,7 +11,11 @@ public class DateOperation {
 
 	public boolean except(){
 		boolean check;
-		if (month<1||month>12||date<1||date>datePermonth[month-1]||month<4||date<18){
+		if (month<4||month>12||date<1||date>datePermonth[month-1]){
+			System.out.println("잘못된 날짜 입력입니다. 다시 입력해주세요");
+			check = true;
+		}
+		else if (month==4&&date<18){
 			System.out.println("잘못된 날짜 입력입니다. 다시 입력해주세요");
 			check = true;
 		}

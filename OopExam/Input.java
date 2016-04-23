@@ -1,4 +1,4 @@
-package com.company;
+package exam1;
 import java.util.Scanner;
 
 public class Input {
